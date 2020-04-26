@@ -1,14 +1,27 @@
-package problem0139
+package main
 
 import (
-	"fmt"
+	"strings"
 )
 
-func Solution(args ...interface{}) bool {
-	s := args[0].(string)
-	wordDict := args[1].([]string)
+func Solve(s string, wordDict []string) bool {
+	n := len(s)
+	cache := make([]bool, 1024) // assumption
+	for i := 0; i < n; i++ {
+		if !cache[i] && i != 0 {
+			continue
+		}
 
-	fmt.Println(s)
-	fmt.Println(wordDict)
-	return false
+		substr := s[i:]
+		for _, w := range wordDict {
+			if cache[i+len(w)] {
+				continue
+			}
+			if strings.HasPrefix(substr, w) {
+				cache[i+len(w)] = true
+			}
+		}
+	}
+
+	return cache[len(s)]
 }
