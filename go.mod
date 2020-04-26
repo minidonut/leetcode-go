@@ -1,3 +1,3 @@
-module github.com/minidonut/leetcode-golang
+module github.com/minidonut/leetcode-go
 
 go 1.14

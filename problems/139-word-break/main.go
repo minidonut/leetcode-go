@@ -5,7 +5,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/minidonut/leetcode-golang/utils"
+	"github.com/minidonut/leetcode-go/utils"
 )
 
 func Validate(ans1 bool, ans2 bool) bool {
