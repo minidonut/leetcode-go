@@ -1,6 +1,6 @@
 package main
 
-import "github.com/minidonut/leetcode-go/containers"
+import "github.com/minidonut/leetcode-go/pkg/containers"
 
 type Input struct {
 	s        string

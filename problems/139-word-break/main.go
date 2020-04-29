@@ -1,6 +1,6 @@
 package main
 
-import "github.com/minidonut/leetcode-go/utils"
+import "github.com/minidonut/leetcode-go/pkg/utils"
 
 func main() {
 	cases := GenerateCase()
