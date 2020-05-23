@@ -9,7 +9,7 @@ func main() {
 	logger.Init(len(cases))
 	for i, c := range cases {
 		logger.Start(i, c.input, c.output)
-		output := Solve(c.input.s, c.input.wordDict)
+		output := Solve(c.input.Nums, c.input.Target)
 		logger.Stop(i, Output{Value: output})
 	}
 
